@@ -43,16 +43,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'chatsite',
     # django-cors-headers
     'corsheaders',
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-
     # middleware for corsheaders
     'corsheaders.middleware.CorsMiddleware',
 
@@ -61,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'chatsite.urls'
@@ -150,9 +149,14 @@ RASA_CORE_MODELS = os.path.join(BASE_DIR, 'rasachat', 'models', 'dialogue')
 RASA_CORE_NLU = os.path.join(BASE_DIR, 'rasachat', 'models', 'default', 'nlu')
 
 #  Add configuration for static files storage using whitenoise
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-ALLOWED_HOSTS = ['mighty-scrubland-90887.herokuapp.com']
+ALLOWED_HOSTS = [
+    'mighty-scrubland-90887.herokuapp.com',
+    '127.0.0.1',
+    'localhost',
+
+]
 # RASA SOCKET CHANNEL
 
 # load your trained agent
