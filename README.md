@@ -34,7 +34,7 @@ input_channel = SocketIOInput(
 )
 
 # set serve_forever=False if you want to keep the server running
-s = agent.handle_channels([input_channel], 5500, serve_forever=True)
+s = agent.handle_channels([input_channel], 5005, serve_forever=True)
 ```
 
 Above piece of code comes from Rasa [docs](https://www.rasa.com/docs/core/connectors/#id18)
@@ -43,29 +43,61 @@ Then in your html template configure rasa-webchat with following code
 
 ```
 <body>
-	<div id="webchat">
-		<script src="https://storage.googleapis.com/mrbot-cdn/webchat-latest.js"></script>
-		<script>
-		    WebChat.default.init({
-		        selector: "#webchat",
-		        initPayload: "/get_started",
-		        interval: 1000, // 1000 ms between each message
-		        customData: {"sender": "django"}, // arbitrary custom data. Stay minimal as this will be added to the socket
-		        socketUrl: "http://localhost:5500/",
-		        title: "Connect",
-		        subtitle: "The bot which connects people",
-		        profileAvatar: "https://rasa.com/assets/img/demo/rasa_avatar.png",
-		        showCloseButton: true,
-		        fullScreenMode: false
-		    })
-		</script>
-	</div>
+          <div class="chatbot">
+              <div class="chatscreen">
+               <ul class="chat-list" id="messages">
+                <!-- chat messages-->
+                    
+                </ul>
+              </div>
+              <div class="chatinput">
+                <form id="chatform">
+                    <div class="form-group">
+                        <div class="speech">
+                          <input class="form-control" id="user_says" placeholder="Start Speaking..."></input>
+                          <img src="../static/img/iconfinder_mic_1055024.png" id="img-listen" class="img img-responsive"/>
+                        </div>
+                      </div>
+                </form>
+              </div>
+            </div>
+      <script>
+        $(function () {
+    
+        var socket = io('http://localhost:5005/', {'path': '/socket.io/', 'pingInterval': 1000, 'pingTimeout': 5000,});
+    
+        socket.on('connect', function(){
+            console.log("connected")
+        });
+    
+        $('#chatform').submit(function(e){
+          e.preventDefault(); // prevents page reloading
+          socket.emit('user_uttered', {'message': $('#user_says').val() });
+          $('<li class="in"><div class="chat-img"><img alt="Avtar" src="http://bootdey.com/img/Content/avatar/avatar2.png"></div><div class="chat-body"><div class="chat-message"><h5>Tim</h5><p></p></div></div></li>').appendTo('#messages').contents().find("p").text($('#user_says').val());
+          return false;
+        });
+        
+        socket.on('bot_uttered', (botUttered) => {
+          $.each(botUttered, function(msg, text) {
+            $('<li class="out"><div class="chat-img"><img alt="Avtar" src="../static/img/bimgirl.jpeg"></div><div class="chat-body"><div class="chat-message"><h5>Sophy</h5><p></p></div></div></li>').appendTo('#messages').contents().find('p').text(botUttered['text']);
+           console.log(botUttered['text'])
+          });
+         
+        });
+    
+        socket.on('disconnect', function(){
+            console.log("disconnected")
+            if (reason !== 'io client disconnect') {
+            this.props.dispatch(disconnectServer());
+          }
+        });
+      });
+      </script>
 </body>
 ```
 
-The ```socketUrl``` is the url endpoint that we configured with **rasa socketio layer** and the ```profileAvatar``` is the image that is displayed in bot message
-
 Now run the django server and the socketio server seperately using two terminals,
+
 
 ```
 ../Django-Rasa-Bot> python manage.py runserver
