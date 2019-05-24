@@ -153,6 +153,7 @@ RASA_CORE_NLU = os.path.join(BASE_DIR, 'rasachat', 'models', 'default', 'nlu')
 
 ALLOWED_HOSTS = [
     'mighty-scrubland-90887.herokuapp.com',
+    'chatbot349.herokuapp.com',
     '127.0.0.1',
     'localhost',
 
