@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
 
@@ -130,10 +131,12 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
+STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(PROJECT_ROOT, 'static')
 ]
 
 
@@ -144,8 +147,12 @@ CORS_ORIGIN_ALLOW_ALL = True
 # path for rasa_core models and dialogue
 RASA_CORE_MODELS = os.path.join(BASE_DIR, 'rasachat', 'models', 'dialogue')
 
-RASA_CORE_NLU = os.path.join(BASE_DIR, 'rasachat', 'models', 'current', 'nlu')
+RASA_CORE_NLU = os.path.join(BASE_DIR, 'rasachat', 'models', 'default', 'nlu')
 
+#  Add configuration for static files storage using whitenoise
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+ALLOWED_HOSTS = ['mighty-scrubland-90887.herokuapp.com']
 # RASA SOCKET CHANNEL
 
 # load your trained agent
