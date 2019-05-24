@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/so-abioye/Downloads/Django-Rasa-Bot-master/rasachat/./models/default/bimnlu/intent_classifier_tensorflow_embedding.ckpt"
+all_model_checkpoint_paths: "/Users/so-abioye/Downloads/Django-Rasa-Bot-master/rasachat/./models/default/bimnlu/intent_classifier_tensorflow_embedding.ckpt"

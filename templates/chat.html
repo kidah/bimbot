@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    	<!-- required for basic layout -->
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/botui/build/botui.min.css">
+	
+        <!-- default theme - you can create your own theme -->
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/botui/build/botui-theme-default.css">
+
+     
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Chat!</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="../static/css/jquery-ui-1.10.4.min.css" rel="stylesheet"><style>
+			.speech {border: 1px solid #DDD; width: auto; padding: 2px; margin: 0; border-radius:4px; height:40px;}
+			.speech input.formcontrol {border: 0; width: 240px; display: inline-block; height: 30px;}
+			.speech img {float: right; width: 40px; }
+        </style>
+      <script src="../static/js/dist/socket.io.js"></script>
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+                <!-- Navbar content -->
+                <a class="navbar-brand" href="#"><b>BIM-BOT</b></a>
+        </nav>
+    </header>
+    <div class="container">
+          <!--main content start-->
+        <section id="main-content"> 
+            <h1>Chat with your building model data!</h1>
+                <div class="alert alert-warning" role="alert">
+                    Caution! Still a work in progress
+                  </div>
+        </section>
+
+        <section>
+            <!-- Widget -->
+            <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <div class="title pull-left">BIM Connect</div>                  
+                    </div>
+                    <div class="panel-body" >
+                      <!-- Widget content -->
+                      <div class="padd sscroll" style="height: 450px;">
+                         <ul id="messages"></ul>   
+                      </div>
+                      <!-- Panel footer -->
+                      <div class="panel-footer">
+                        <form role="form" method="post" id="chatForm">
+                          <div class="form-group">
+                            <div class="speech">
+                             {% csrf_token %}
+                             {{ form.message }}
+                             <img onclick="startDictation()" src="//i.imgur.com/cHidSVu.gif"/> 
+                            </div>           
+                          </div>
+                      
+                        </form>
+       
+                  
+                      </div>
+                    </div>
+                    </div>
+
+        </section>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+    	<!-- ajax cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- HTML5 Speech Recognition API -->
+
+  <script>
+    $(function () {
+
+    var socket = io('http://localhost:5005/', {'path': '/socket.io/', 'pingInterval': 1000, 'pingTimeout': 5000,});
+
+    socket.on('connect', function(){
+        console.log("connected")
+    });
+
+    $('#chatForm').submit(function(e){
+      e.preventDefault(); // prevents page reloading
+      socket.emit('user_uttered', {'message': $('#transcribed').val() });
+      $('#messages').append($('<li>').text($('#transcribed').val()));
+      return false;
+    });
+    
+    socket.on('bot_uttered', (botUttered) => {
+      console.log(botUttered);
+      $('#messages').append($('<li>').text(botUttered['text']));
+    });
+
+    socket.on('disconnect', function(){
+        console.log("disconnected")
+        if (reason !== 'io client disconnect') {
+        this.props.dispatch(disconnectServer());
+      }
+    });
+  });
+  </script>
+
+<script>
+        function startDictation() {
+      
+          if (window.hasOwnProperty('webkitSpeechRecognition')) {
+      
+            var recognition = new webkitSpeechRecognition();
+      
+            recognition.continuous = false;
+            recognition.interimResults = false;
+      
+            recognition.lang = "en-GB";
+            recognition.start();
+      
+            recognition.onresult = function(e) {
+              document.getElementById('transcribed').value
+                                       = e.results[0][0].transcript;
+              recognition.stop();
+              document.getElementById('chatForm').submit();
+            };
+            recognition.onerror = function(e) {
+              recognition.stop();
+            }
+          }
+        }
+      </script> 
+  </body>
+</html>

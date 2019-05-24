@@ -1,0 +1,207 @@
+%YAML 1.1
+---
+actions:
+- utter_greet_name
+- utter_greet
+- utter_greet_noname
+- utter_thanks
+- utter_bye
+- utter_deny
+- utter_default
+- utter_awesome
+- utter_can_do
+- utter_react_negative
+- utter_react_positive
+- utter_great
+- utter_ask_name
+- utter_ask_goal
+- utter_anything_else
+- utter_ask_whatismyname
+- utter_ask_howbuilt
+- utter_handleinsult
+- utter_telljoke
+- utter_nicetomeetyou
+- utter_noworries
+- utter_outofscope
+- utter_whatspossible
+- utter_inform_privacypolicy
+- action_greet
+- action_project_issues
+- action_chitchat
+- action_project_design
+- action_pause
+- action_joke
+- action_project_info
+config:
+  store_entities_as_slots: true
+entities:
+- best_food
+- favorite_book
+- name
+- address
+- hobbies
+- employer
+- assignedTo
+- duedate
+- owner
+- status
+- types
+- best_movie
+- nationality
+- title
+- location
+- rootCause
+- description
+- Address
+- ProjectType
+- ContractType
+- ConstructionType
+- ProjectValue
+- StartDate
+- EndDate
+- Duration
+- JobNumber
+- gfa
+- levels
+- volume
+- frameType
+- prefab
+- insitu
+forms:
+- getusername_form
+intents:
+- greet:
+    use_entities: true
+- ask_whichproject:
+    use_entities: true
+- affirmative:
+    use_entities: true
+- negative:
+    use_entities: true
+- bye:
+    use_entities: true
+- thank:
+    use_entities: true
+- enter_data:
+    use_entities: true
+- whats_possible:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- bot_chitchat:
+    use_entities: true
+- search_project_issues:
+    use_entities: true
+- search_design_data:
+    use_entities: true
+- project_information:
+    use_entities: true
+slots:
+  issues_Type:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  name:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  projectTitle:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  requested_slot:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  shown_privacy:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+templates:
+  utter_anything_else:
+  - text: Is there anything else I can help you with?
+  utter_ask_goal:
+  - text: Would you like to get a brief about the projects? 🧞‍
+  utter_ask_howbuilt:
+  - text: I was built with a lot of love and patience.
+  utter_ask_name:
+  - text: Hey there! Tell me your name.
+  utter_ask_whatismyname:
+  - text: It's probably the one that your parents chose for you.
+  utter_awesome:
+  - text: Awesome, thanks! 👍
+  - text: Sweet, thank you! 😄
+  - text: Thanks! 👌
+  - text: Cool, thank you!
+  utter_bye:
+  - text: Goodbye!
+  - text: Bye!
+  - text: Ciao!
+  - text: Bye, was nice talking to you!
+  utter_can_do:
+  - text: Sure thing!
+  - text: Can do!
+  - text: You got it. 👍
+  utter_canthelp:
+  - text: I'm sorry I couldn't help you. If you have general questions about the projects,
+      design and issues, otherwise contact sofiat.
+  - text: Sorry, I cannot answer your question
+  utter_default:
+  - text: Sorry, I didn't get that 🤷🏻‍. Could you please rephrase?
+  - text: I didn't understand, could you rephrase that?
+  - text: I'm sorry, but I didn't understand you. Could you please rephrase what you
+      just said?
+  - text: I'm afraid I didn't get what you just said. Could you rephrase that?
+  - text: I didn't quite get that, could you rephrase your message?
+  - text: Could you rephrase your message? I didn't get it, I'm sorry.
+  utter_deny:
+  - text: ok
+  - text: that's alright
+  - text: that's fine
+  utter_great:
+  - text: Great! 👍
+  - text: That's great! 🙌
+  - text: Awesome! 🎉
+  - text: Cool, let's do it 🚀
+  - text: ok 😍
+  utter_greet:
+  - text: Hey there, welcome to the conversational building data service!
+  utter_greet_name:
+  - text: Hi, {name}!
+  - text: Hello, {name}!
+  - text: Hey, {name}!
+  - text: Nice to you meet you {name}. How can I help?
+  utter_greet_noname:
+  - text: Hey!
+  - text: Hi!
+  - text: Hey there!
+  utter_handleinsult:
+  - text: That’s not very nice 😢
+  utter_inform_privacypolicy:
+  - text: 'By chatting to me you agree to our privacy policy, which you can read here:
+      https://conversationalbim.com/privacy-policy/.'
+  utter_nicetomeetyou:
+  - text: Thank you. It is a pleasure to meet you as well!
+  - text: It is nice to meet you too!
+  - text: Pleased to meet you too!
+  - text: Likewise!
+  utter_noworries:
+  - text: No worries!
+  - text: You're welcome!
+  - text: I'm happy to help.
+  - text: My pleasure.
+  utter_outofscope:
+  - text: Sorry, I cannot answer your question
+  - text: Unfortuantely, I cannot answer that question
+  - text: Sorry, that question is out of my scope
+  utter_react_negative:
+  - text: ok 😢
+  utter_react_positive:
+  - text: ok 😍
+  utter_telljoke:
+  - text: Why are eggs not very much into jokes? - Because they could crack up.
+  - text: Do you know a tree’s favorite drink? - Root beer!
+  - text: Why do the French like to eat snails so much? - They can’t stand fast food.
+  utter_whatspossible:
+  - text: I provide relevant information about your organisations construction projects,
+      its design and issues
