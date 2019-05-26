@@ -156,7 +156,6 @@ ALLOWED_HOSTS = [
     'chatbot349.herokuapp.com',
     '127.0.0.1',
     'localhost',
-
 ]
 # RASA SOCKET CHANNEL
 

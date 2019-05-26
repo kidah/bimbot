@@ -1,0 +1,31 @@
+version: '3.0'
+
+services:
+#  db:
+#    image: postgres
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: 
+      - python3 /code/manage.py runserver
+    #entrypoint: ./docker-entrypoint.sh
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    tty: true
+
+  rasa:
+    image: rasa/rasa:latest-full
+    ports:
+      - 5005:5005
+    volumes:
+      - ./:/app
+    command:
+      - run
+
+  action_server:
+    image: rasa/rasa_sdk:latest
+    volumes:
+      - ./actions:/app/actions
