@@ -118,6 +118,7 @@
           $.each(botUttered, function(msg, text) {
             $('<li class="out"><div class="chat-img"><img alt="Avtar" src="../static/img/bimgirl.jpeg"></div><div class="chat-body"><div class="chat-message"><h5>Sophy</h5><p></p></div></div></li>').appendTo('#messages').contents().find('p').text(botUttered['text']);
            console.log(botUttered['text'])
+           responsiveVoice.speak(botUttered['text']);
           });
          
         });

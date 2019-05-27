@@ -1,109 +1,159 @@
 ## greet
 * greet
-    - utter_ask_name
-
-## get user name
-* enter_data{"name": "Sofiat"}
     - action_greet
+
+* enter_data {"name": "sofiat"}
+    - action_greet 
 
 ## thanks
 * thank
     - utter_noworries
     - utter_anything_else
 
+## negative
+* negative
+    - utter_anything_else
+
 ## bye
 * bye
     - utter_bye
+
+## enter project name 
+* enter_data {"projectname": "UWE FBL building"}
+   - action_project_info
+
+## enter project name
+* enter_data {"name": "sofiat"}
+    - action_greet 
 
 ## ask what bot can do
 * whats_possible
     - utter_whatspossible
 
-## deny or negative
-*  negative
-    - utter_deny
-
-## affirmative
-* affirmative
-    - utter_great
-
 ## out of scope
 * out_of_scope
     - utter_outofscope
 
+## project information
+ * project_information
+    - action_project_info
+
 ## search project issues
 * search_project_issues
     - action_project_issues
-    
-## search design data
-* search_design_data
-    - action_project_design
 
-## greet + no brief
+## bot chitchat
+
+* bot_chitchat
+    - action_chitchat
+
+
+## greet + no brief + nothing else
 * greet
-    - utter_ask_name
-* enter_data{"name": "Sofiat"}
     - action_greet
+
+* enter_data {"name": "sofiat"}
+    - action_greet 
+
 * negative
     - utter_anything_else
+
+* negative
+    - utter_bye
+
+## greet + no brief + yes
+* greet
+    - action_greet
+
+* enter_data {"name": "sofiat"}
+    - action_greet 
+
+* negative
+    - utter_anything_else
+
+* affirmative
+    - utter_great
+
 
 ## greet + yes brief
 * greet
     - action_greet
-* enter_data{"name": "Sofiat"}
+
+* enter_data {"name": "sofiat"}
+    - action_greet 
+
+* affirmative
+    - utter_ask_projectname
+
+* enter_data {"projectname": "UWE FBL building"}
+    - action_project_info
+
+* affirmative
+   - utter_great
+
+## greet + yes brief + yes to anything else +  project information + thanks + bye
+* greet
     - action_greet
+
+* enter_data {"name": "sofiat"}
+    - action_greet 
+
+* affirmative
+    - utter_ask_projectname
+
+* enter_data {"projectname": "UWE FBL building"}
+    - action_project_info
+
 * affirmative
     - utter_great
 
-## greet + yes brief + search design data
+## greet + yes brief + nothing else +  project information + thanks + bye
 * greet
     - action_greet
 
-* positive
-    - utter_react_positive
+* enter_data {"name": "sofiat"}
+    - action_greet 
 
-* search_design_data
-    - action_project_design
+* affirmative
+    - utter_ask_projectname
 
-* thank
-    - utter_noworries
-
-## greet + no brief + search design data
-* greet
-    - action_greet
+* enter_data {"projectname": "UWE FBL building"}
+    - action_project_info
 
 * negative
-    - utter_react_negative
+    - utter_bye
 
-* search_design_data
-    - action_project_design
+## greet + no + search project information + thanks + bye
+* greet
+    - action_greet
+
+* enter_data {"name": "sofiat"}
+    - action_greet 
+
+* negative
+    - utter_askwhat
+
+* project_information
+    - action_project_info
 
 * thank
     - utter_noworries
 
 * bye
     - utter_bye
-
 
 ## greet + bot chitchat + thanks + bye
 * greet
     - action_greet
 
+* enter_data {"name": "sofiat"}
+    - action_greet 
+
+* negative
+    - utter_askwhat
+
 * bot_chitchat
     - action_chitchat
-
-* thank
-    - utter_noworries
-
-* bye
-    - utter_bye
-
-## greet + project information + thanks + bye
-* greet
-    - action_greet
-
-* project_information
-    - action_project_info
 
 * thank
     - utter_noworries
@@ -116,24 +166,11 @@
 * greet
     - action_greet
 
-* positive
-    - utter_react_positive
-
-* search_project_issues
-    - action_project_issues
-
-* thank
-    - utter_noworries
-
-* bye
-    - utter_bye
-
-## greet + no brief + search project issues
-* greet
-    - action_greet
+* enter_data {"name": "sofiat"}
+    - action_greet 
 
 * negative
-    - utter_react_negative
+    - utter_askwhat
 
 * search_project_issues
     - action_project_issues

@@ -2,40 +2,35 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
+        "projectname",
         "name"
       ]
     },
-    "utter_noworries": {
-      "slots": []
-    },
-    "utter_great": {
+    "utter_bye": {
       "slots": []
     },
     "utter_anything_else": {
       "slots": []
     },
-    "utter_deny": {
-      "slots": []
-    },
-    "utter_ask_name": {
-      "slots": []
-    },
-    "action_project_design": {
-      "slots": []
-    },
-    "utter_bye": {
-      "slots": []
-    },
-    "action_greet": {
-      "slots": []
-    },
-    "utter_whatspossible": {
+    "utter_great": {
       "slots": []
     },
     "action_project_issues": {
       "slots": []
     },
+    "action_project_info": {
+      "slots": []
+    },
     "utter_outofscope": {
+      "slots": []
+    },
+    "utter_whatspossible": {
+      "slots": []
+    },
+    "action_greet": {
+      "slots": []
+    },
+    "action_chitchat": {
       "slots": []
     }
   },
@@ -55,7 +50,7 @@
     "rasa_core.policies.form_policy.FormPolicy",
     "rasa_core.policies.mapping_policy.MappingPolicy"
   ],
-  "trained_at": "20190523-221854",
+  "trained_at": "20190527-102949",
   "rasa_core": "0.14.4",
   "tensorflow": "1.13.1",
   "sklearn": "0.20.3"

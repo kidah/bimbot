@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 def db_conn(query, t=None):
     try:
         # Open connection to DB
-        conn = sqlite3.connect('./data/sqlite.db')
+        conn = sqlite3.connect('./data/sqlite2.db')
         # Create a cursor
         c = conn.cursor()
         # Execute the query
@@ -35,13 +35,12 @@ def db_conn(query, t=None):
             logger.info(results)
             return results
         else:
+            logger.info(query)
             c.execute(query)
             results = c.fetchall()
 		    # Extract the row headers
             row_headers=[x[0] for x in c.description]
             # Return the results
-            logger.info(query)
-            logger.info(results)
             json_data= []
             for result in results:
                 json_data.append(dict(zip(row_headers,result)))
@@ -49,51 +48,6 @@ def db_conn(query, t=None):
             return json_data
     except IOError:
         return "Database connection error"
-
-class UserNameForm(FormAction):
-   """Example of a custom form action"""
-
-   def name(self):
-       # type: () -> Text
-       """Unique identifier of the form"""
-
-       return "getusername_form"
-
-   @staticmethod
-   def required_slots(tracker):
-       # type: () -> List[Text]
-       """A list of required slots that the form has to fill"""
-       return ["name"]
-
-   def slot_mappings(self):
-        return {
-            "name": [
-                self.from_entity(entity="name"),
-                self.from_text(intent="enter_data"),
-            ]
-        }
-   def validate_name(self, value, dispatcher, tracker, domain):
-        """Check to see if an name entity was actually picked up by duckling."""
-
-        if any(tracker.get_latest_entity_values("name")):
-            # entity was picked up, validate slot
-            return {"name": value}
-        #else:
-            # no entity was picked up, we want to ask again
-            #dispatcher.utter_template("utter_ask_name", tracker)
-        #    return {"name": None}
-
-   def submit(self, dispatcher, tracker, domain):
-       # type: (CollectingDispatcher, Tracker, Dict[Text, Any]) -> List[Dict]
-       """Define what the form has to do
-           after all required slots are filled"""
-       # utter submit template
-       name_entity = tracker.get_slot("name")
-       if name_entity:
-            dispatcher.utter_template('utter_greet_name', tracker)
-       else:
-            dispatcher.utter_template('utter_greet', tracker)
-       return [SlotSet("name", name_entity)]
 
 
 class ActionGreetUser(Action):
@@ -106,26 +60,32 @@ class ActionGreetUser(Action):
         intent = tracker.latest_message["intent"].get("name")
         shown_privacy = tracker.get_slot("shown_privacy")
         name_entity = next(tracker.get_latest_entity_values("name"), None)
-  
+        username = tracker.get_slot("name")
+
         if intent == "greet":
-            if shown_privacy and name_entity and name_entity.lower() != "sara":
-                dispatcher.utter_template("utter_greet_name", tracker, name=name_entity)
-                return [SlotSet("name", name_entity)]
-            elif shown_privacy:
-                dispatcher.utter_template("utter_greet_noname", tracker)
+            if shown_privacy and username:
+                dispatcher.utter_template("utter_greet_name", tracker, name=username)
+                return []
+            elif username is None:
+                dispatcher.utter_template("utter_greet", tracker)
+                dispatcher.utter_template("utter_ask_name", tracker)
                 return []
             else:
-                dispatcher.utter_template("utter_greet", tracker)
                 dispatcher.utter_template("utter_whatspossible", tracker)
-                dispatcher.utter_template("utter_inform_privacypolicy", tracker)
+                #dispatcher.utter_template("utter_inform_privacypolicy", tracker)
                 dispatcher.utter_template("utter_ask_goal", tracker)
                 return [SlotSet("shown_privacy", True)]	
-        elif not shown_privacy and intent == "enter_data":
-            dispatcher.utter_template("utter_greet_name", tracker)
-            dispatcher.utter_template("utter_inform_privacypolicy", tracker)
+
+        elif not shown_privacy and intent == "enter_data" and name_entity:
+            dispatcher.utter_template("utter_greet_name", tracker, name=name_entity)
+            dispatcher.utter_template("utter_whatspossible", tracker)
+            #dispatcher.utter_template("utter_inform_privacypolicy", tracker)
+            dispatcher.utter_template("utter_ask_goal", tracker)
             return [SlotSet("shown_privacy", True), SlotSet("name", name_entity)]
-        elif shown_privacy:
-            dispatcher.utter_template("utter_greet", tracker)
+
+        elif intent == "enter_data":
+            dispatcher.utter_template("utter_greet_name", tracker, name=name_entity)
+            return [SlotSet("name", name_entity)]
         return []
 
 class ActionProject(Action):
@@ -136,31 +96,64 @@ class ActionProject(Action):
 
     def run(self, dispatcher, tracker, domain):
         intent = tracker.latest_message["intent"].get("name")
-        ents = ["start_date", "end_date", "value", "name", "type", "construction_type", "contract_type", "job_number", "address", "business_unit", "duration"]
         message = tracker.latest_message['text']
+        projectname = tracker.get_slot("projectname")
         summary_terms = ["brief", "summary", "description", "run-through"]
+        projectname_entity = next(tracker.get_latest_entity_values("projectname"), None)
         match_brief = [item for item in summary_terms if re.search(item, message)]
-        # retrieve the correct chitchat utterance dependent on the intent
+        entities = tracker.latest_message["entities"]
+        logger.info(entities)
+        # retrieve the correct chitchat utterance dependent on the intent tell me a summary of the project and gfa tell me the frame type of the building
         if intent == 'project_information':
-            entities = [i for i in ents if next(tracker.get_latest_entity_values(i), None) is not None]
-            if not entities and match_brief:
-                params = ', '.join(ents)
-                query = "select * from project"
+            if projectname is not None and match_brief:
+                query = 'SELECT * FROM project where Name="{}"'.format(projectname)
                 res = db_conn(query)
                 result = res[0]
-                message = "this project is a " + result["construction_type"]  + ", of an " + result["name"] + " located at "
-                + result["address"] + ". It has a " + result["contract_type"] + " contract and lasts for " + result["duration"] + " and costs "
-                + result["value"]
-                dispatcher.utter_message("hello")
-            elif entities:
-                params = ', '.join(entities)
-                query = "select " + params + " from project"
-                res = db_conn(query)
-                result = res[0]
-                data = ', '.join([result[param] for param in entities])
-                dispatcher.utter_message("the " + params +  " of the building is " + str(data))
+                message = result["Name"] + " is a " + result["ProjectValue"] + " project for " + result["ClientName"] + " situated at " + result["Address"] + ". It is a " + result["ConstructionType"] + " project with a " + result["Duration"] + " duration."
+                dispatcher.utter_message(message)
+                dispatcher.utter_template("utter_askwhatelse", tracker)
+
+            elif entities and projectname is None:
+                ents = [ent['entity'] for ent in entities if ent != 'projectname']
+                dispatcher.utter_template("utter_ask_projectname", tracker)
+                return [SlotSet("psearch_request", ents)]
+
+            elif not entities:
+                 dispatcher.utter_template("utter_canthelp", tracker)
+
             else:
-                dispatcher.utter_template("utter_default", tracker)      
+                params = ', '.join([i['entity'] for i in entities if i['entity'] != 'projectname'])
+                query = 'select ' + params + ' from project where Name = "{}"'.format(projectname)
+                res = db_conn(query)
+                if not res:
+                    dispatcher.utter_template("utter_projectdoesnotexist", tracker)
+                else:
+                    result = res[0]
+                    message = ', '.join([result[param] for param in result])
+                    dispatcher.utter_message(message) 
+        elif intent == 'enter_data' and projectname_entity:
+            #  check requested slot values to affect query
+            psearch_request = tracker.get_slot("psearch_request")
+            if psearch_request:
+                params = ', '.join([i for i in psearch_request])
+                query = 'select ' + params + ' from project where Name = "{}"'.format(projectname)
+                res = db_conn(query)
+                if not res:
+                    dispatcher.utter_template("utter_projectdoesnotexist", tracker)
+                else:
+                    result = res[0]
+                    message = ', '.join([result[param] for param in result])
+                    dispatcher.utter_message(message)
+                    return [SlotSet("psearch_request", [])]
+            elif not psearch_request:
+                query = 'SELECT * FROM project where Name="{}"'.format(projectname_entity) 
+                res = db_conn(query)
+                if not res:
+                    dispatcher.utter_template("utter_projectdoesnotexist", tracker)
+                else:
+                    result = res[0]
+                    message = result["Name"] + " is a " + result["ProjectValue"] + " project for " + result["ClientName"] + " situated at " + result["Address"] + ". It is a " + result["ConstructionType"] + " project with a " + result["Duration"] + " duration."
+                    dispatcher.utter_message(message)
         return []
         
 class ActionProjectIssues(Action):
@@ -194,41 +187,6 @@ class ActionProjectIssues(Action):
 			dispatcher.utter_message("the project issues are " + str(data))
 		return []
 
-class ActionProjectDesign(Action):
-    """Returns the chitchat utterance dependent on the intent"""
-
-    def name(self):
-        return "action_project_design"
-
-    def run(self, dispatcher, tracker, domain):
-        intent = tracker.latest_message["intent"].get("name")
-        ents = ["gfa", "levels", "volume", "prefab", "insitu", "frameType"]
-        message = tracker.latest_message['text']
-        summary_terms = ["brief", "summary", "description", "run-through"]
-        match_brief = [item for item in summary_terms if re.search(item, message)]
-        logger.info(match_brief)
-        # retrieve the correct chitchat utterance dependent on the intent
-        if intent == 'search_design_data':
-            entities = [i for i in ents if next(tracker.get_latest_entity_values(i), None) is not None]
-            if not entities and match_brief:
-                params = ', '.join(ents)
-                query = "select * from design"
-                res = db_conn(query)
-                result = res[0]
-                logger.info(res[0])
-                message = "the project has a volume of " + result["volume"] + ", gross floor area of " + result["gfa"] + ", " + result["frameType"] + " frames and " + result["levels"] + " levels"
-                dispatcher.utter_message(message)
-            elif entities:
-                params = ', '.join(entities)
-                query = "select " + params + " from design"
-                res = db_conn(query)
-                result = res[0]
-                #logger.info(result[0]['volume'])
-                data = ', '.join([result[param] for param in entities])
-                dispatcher.utter_message("the " + params +  " of the building is " + str(data))
-            else:
-                dispatcher.utter_template("utter_default", tracker)      
-        return []
         
 class ActionChitchat(Action):
     """Returns the chitchat utterance dependent on the intent"""
@@ -238,21 +196,21 @@ class ActionChitchat(Action):
 
     def run(self, dispatcher, tracker, domain):
         intent = tracker.latest_message["intent"].get("name")
-        ents = ["book","movie", "nationality", "courseStudied", "gender", "name", "food", "employer", "hobbies"]
+        entities = tracker.latest_message["entities"]
+        logger.info(entities)
         # retrieve the correct chitchat utterance dependent on the intent
         if intent == 'bot_chitchat':
-            entities = [i for i in ents if next(tracker.get_latest_entity_values(i), None) is not None]
-            #logger.info(entities)
+            #
             if not entities:
                 dispatcher.utter_template("utter_canthelp", tracker)
             else:
-                params = ', '.join(entities)
-                query = "select " + params + " from bot"
+                params = ', '.join([i['entity'] for i in entities])
+                query = 'select ' + params + ' from bot '
                 res = db_conn(query)
                 result = res[0]
-                data = ', '.join([result[param] for param in entities])
-                #logger.info(result)
-                dispatcher.utter_message("my "+ params + " is " + str(data))
+                message = ', '.join([result[param] for param in result])
+                logger.info(message)
+                dispatcher.utter_message(message)
         return []
 
 class ActionJoke(Action):
