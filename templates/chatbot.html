@@ -72,7 +72,9 @@
                     <div class="form-group">
                         <div class="speech">
                           <input class="form-control" id="user_says" placeholder="Start Speaking..."></input>
-                          <img src="../static/img/iconfinder_mic_1055024.png" id="img-listen" class="img img-responsive"/>
+
+                         <img src="../static/img/iconfinder_mic_1055024.png" id="img-listen" class="img img-responsive"/>
+                         
                         </div>
                       </div>
                 </form>
@@ -100,13 +102,35 @@
 
 <script>
         $(function () {
-    
         var socket = io('http://localhost:5005/', {'path': '/socket.io/', 'pingInterval': 1000, 'pingTimeout': 5000,});
-    
         socket.on('connect', function(){
             console.log("connected")
         });
-    
+        if(window.hasOwnProperty('webkitSpeechRecognition')) {
+            var recognition = new webkitSpeechRecognition();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.lang = "en-GB";
+            var user_said = '';
+            $('#img-listen').click(function(){
+                recognition.start()
+                $('#img-listen').addClass("pulse-ring");
+                recognition.onresult = function(e) {
+                document.getElementById('user_says').value
+                                   = e.results[0][0].transcript;
+                
+                user_said = e.results[0][0].transcript;
+                console.log(user_said);
+                recognition.stop();
+                $('#img-listen').removeClass("pulse-ring");
+                  socket.emit('user_uttered', {'message': $('#user_says').val() });
+                  $('<li class="in"><div class="chat-img"><img alt="Avtar" src="http://bootdey.com/img/Content/avatar/avatar2.png"></div><div class="chat-body"><div class="chat-message"><h5>User</h5><p></p></div></div></li>').appendTo('#messages').contents().find("p").text($('#user_says').val());
+              }    
+            })  
+            };
+            recognition.onerror = function(e) {
+            recognition.stop();
+          }  
         $('#chatform').submit(function(e){
           e.preventDefault(); // prevents page reloading
           socket.emit('user_uttered', {'message': $('#user_says').val() });
@@ -130,49 +154,7 @@
           }
         });
       });
-      </script>
 
-   <!-- HTML5 Speech Recognition API -->
-<script>
-    $(function () {
-        if(window.hasOwnProperty('webkitSpeechRecognition')) {
-            var recognition = new webkitSpeechRecognition();
-            recognition.continuous = false;
-            recognition.interimResults = false;
-            recognition.lang = "en-GB";
-            var user_said = '';
-            $('#img-listen').click(function(){
-                recognition.start()
-                $('#img-listen').addClass("pulse-ring");
-                recognition.onresult = function(e) {
-                document.getElementById('user_says').value
-                                   = e.results[0][0].transcript;
-            
-                user_said = e.results[0][0].transcript;
-                console.log(user_said);
-                recognition.stop();
-                $('#img-listen').removeClass("pulse-ring");
-                var socket = io('http://localhost:5005/', {'path': '/socket.io/', 'pingInterval': 1000, 'pingTimeout': 5000,});
-                socket.on('connect', function(){
-                  console.log("connected")
-                  socket.emit('user_uttered', {'message': user_said });
-                  $('<li class="in"><div class="chat-img"><img alt="Avtar" src="http://bootdey.com/img/Content/avatar/avatar2.png"></div><div class="chat-body"><div class="chat-message"><h5>User</h5><p></p></div></div></li>').appendTo('#messages').contents().find("p").text($('#user_says').val());
-                  });
-                
-                socket.on('bot_uttered', (botUttered) => {
-                $.each(botUttered, function(msg, text) {
-                $('<li class="out"><div class="chat-img"><img alt="Avtar" src="../static/img/bimgirl.jpeg"></div><div class="chat-body"><div class="chat-message"><h5>Sophie</h5><p></p></div></div></li>').appendTo('#messages').contents().find('p').text(botUttered['text']);
-                 console.log(botUttered['text'])
-                 responsiveVoice.speak(botUttered['text']);
-                });
-                });
-            }    
-            })  
-            };
-            recognition.onerror = function(e) {
-            recognition.stop();
-          }       
-    })
 </script>
     
   </body>
