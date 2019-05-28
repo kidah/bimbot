@@ -22,6 +22,7 @@ actions:
 - utter_telljoke
 - utter_nicetomeetyou
 - utter_namenotrecognised
+- utter_projectnameunaccepted
 - utter_noworries
 - utter_outofscope
 - utter_whatspossible
@@ -30,11 +31,11 @@ actions:
 - utter_ask_projectname
 - utter_inform_privacypolicy
 - action_greet
-- action_project_issues
 - action_chitchat
 - action_pause
 - action_joke
 - action_project_info
+- action_project_issues
 config:
   store_entities_as_slots: true
 entities:
@@ -91,8 +92,6 @@ intents:
 - whats_possible:
     use_entities: true
 - bot_chitchat:
-    use_entities: true
-- search_project_issues:
     use_entities: true
 - project_information:
     use_entities: true
@@ -206,6 +205,8 @@ templates:
   utter_projectdoesnotexist:
   - text: The project name you mentioned does not exist in the database. Kindly rephrase
       or provide another name
+  utter_projectnameunaccepted:
+  - text: I can not recognise that as a project name. Please provide another
   utter_react_negative:
   - text: 'ok '
   utter_react_positive:

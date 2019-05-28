@@ -10,7 +10,6 @@ intents:
   - enter_data
   - whats_possible
   - bot_chitchat
-  - search_project_issues
   - project_information
 
 entities:
@@ -112,6 +111,8 @@ templates:
     - text: "How can I help you today?"
   utter_namenotrecognised:
     - text: "I couldn't recognise that as a name. Please provide another"
+  utter_projectnameunaccepted:
+    - text: "I can not recognise that as a project name. Please provide another"
   utter_askwhatelse:
     - text: "What else can I do for you?"
     - text: "Anything else?"
@@ -184,6 +185,7 @@ actions:
   - utter_telljoke
   - utter_nicetomeetyou
   - utter_namenotrecognised
+  - utter_projectnameunaccepted
   - utter_noworries
   - utter_outofscope
   - utter_whatspossible
@@ -192,11 +194,11 @@ actions:
   - utter_ask_projectname
   - utter_inform_privacypolicy
   - action_greet
-  - action_project_issues
   - action_chitchat
   - action_pause
   - action_joke
   - action_project_info
+  - action_project_issues
   
 
 forms:

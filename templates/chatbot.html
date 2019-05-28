@@ -22,7 +22,7 @@
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">
         <img src="../static/img/chat.png" width="35px" height="35px" class="img img-fluid" />
-        <span class='page-title'>CAPCAT</span></a>
+        <span class='page-title'>BIMBOT</span></a>
       <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
@@ -118,19 +118,18 @@
                 recognition.onresult = function(e) {
                 document.getElementById('user_says').value
                                    = e.results[0][0].transcript;
-                
                 user_said = e.results[0][0].transcript;
                 console.log(user_said);
                 recognition.stop();
                 $('#img-listen').removeClass("pulse-ring");
-                  socket.emit('user_uttered', {'message': $('#user_says').val() });
-                  $('<li class="in"><div class="chat-img"><img alt="Avtar" src="http://bootdey.com/img/Content/avatar/avatar2.png"></div><div class="chat-body"><div class="chat-message"><h5>User</h5><p></p></div></div></li>').appendTo('#messages').contents().find("p").text($('#user_says').val());
+                socket.emit('user_uttered', {'message': $('#user_says').val() });
+                $('<li class="in"><div class="chat-img"><img alt="Avtar" src="http://bootdey.com/img/Content/avatar/avatar2.png"></div><div class="chat-body"><div class="chat-message"><h5>User</h5><p></p></div></div></li>').appendTo('#messages').contents().find("p").text($('#user_says').val());
               }    
             })  
             };
             recognition.onerror = function(e) {
             recognition.stop();
-          }  
+          }
         $('#chatform').submit(function(e){
           e.preventDefault(); // prevents page reloading
           socket.emit('user_uttered', {'message': $('#user_says').val() });

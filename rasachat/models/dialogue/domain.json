@@ -8,7 +8,6 @@
     "intent_greet",
     "intent_negative",
     "intent_project_information",
-    "intent_search_project_issues",
     "intent_thank",
     "intent_whats_possible",
     "entity_Food",
@@ -76,6 +75,7 @@
     "prev_utter_telljoke",
     "prev_utter_nicetomeetyou",
     "prev_utter_namenotrecognised",
+    "prev_utter_projectnameunaccepted",
     "prev_utter_noworries",
     "prev_utter_outofscope",
     "prev_utter_whatspossible",
@@ -84,11 +84,11 @@
     "prev_utter_ask_projectname",
     "prev_utter_inform_privacypolicy",
     "prev_action_greet",
-    "prev_action_project_issues",
     "prev_action_chitchat",
     "prev_action_pause",
     "prev_action_joke",
     "prev_action_project_info",
+    "prev_action_project_issues",
     "prev_getusername_form",
     "active_form_getusername_form"
   ]

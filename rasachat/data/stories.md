@@ -16,7 +16,7 @@
     - utter_bye
 
 ## enter project name 
-* enter_data {"projectname": "UWE FBL building"}
+* enter_data {"projectname": "UWE fbl building"}
    - action_project_info
 
 
@@ -184,21 +184,3 @@
     - utter_bye
 
 
-## greet + yes brief + search project issues
-* greet
-    - action_greet
-
-* enter_data {"name": "sofiat"}
-    - action_greet 
-
-* negative
-    - utter_askwhat
-
-* search_project_issues
-    - action_project_issues
-
-* thank
-    - utter_noworries
-
-* bye
-    - utter_bye

@@ -102,8 +102,8 @@ class ActionProject(Action):
         projectname_entity = next(tracker.get_latest_entity_values("projectname"), None)
         match_brief = [item for item in summary_terms if re.search(item, message)]
         entities = tracker.latest_message["entities"]
-        logger.info(entities)
-        # retrieve the correct chitchat utterance dependent on the intent tell me a summary of the project and gfa tell me the frame type of the building
+        #logger.info(projectname_entity)
+        # retrieve the correct chitchat utterance dependent on the intent tell me a volume of the project and gfa tell me the frame type of the building
         if intent == 'project_information':
             if projectname is not None and match_brief:
                 query = 'SELECT * FROM project where Name="{}"'.format(projectname)
@@ -155,38 +155,9 @@ class ActionProject(Action):
                     message = result["Name"] + " is a " + result["ProjectValue"] + " project for " + result["ClientName"] + " situated at " + result["Address"] + ". It is a " + result["ConstructionType"] + " project with a " + result["Duration"] + " duration."
                     dispatcher.utter_message(message)
                     dispatcher.utter_template("utter_anything_else", tracker)
+        elif intent == 'enter_data' and projectname_entity is None:
+            dispatcher.utter_template("utter_projectnameunaccepted", tracker)
         return []
-        
-class ActionProjectIssues(Action):
-	def name(self):
-		return 'action_project_issues'
-		
-	def run(self, dispatcher, tracker, domain):
-		intent = tracker.latest_message["intent"].get("name")
-		entities = tracker.latest_message["entities"]
-		message = tracker.latest_message['text']
-		query_type = ['how many', 'count']
-        # retrieve the correct chitchat utterance dependent on the intent
-		if intent == 'search_project_issues':
-			params = {}
-			for ent in entities:
-				params[ent["entity"]] = str(ent["value"])
-			count_response = False
-			if any([word in message for word in query_type]):
-				query = 'SELECT COUNT(*) FROM issues'
-				count_response = True
-			else:
-				query = 'SELECT * FROM issues'
-                # Add filter clauses for each of the parameters
-				if len(params) > 0:
-					filters = ["{}=?".format(k) for k in params]
-					query += " WHERE " + " and ".join(filters)
-                # Create the tuple of values
-			t = tuple(params.values())
-			result = db_conn(query, t=t)
-			data = ', '.join([res[1] for res in result])
-			dispatcher.utter_message("the project issues are " + str(data))
-		return []
 
         
 class ActionChitchat(Action):

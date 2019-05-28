@@ -17588,3 +17588,678 @@ Instructions for updating:
 Use tf.cast instead.
 Rasa Core server is up and running on http://localhost:5005
 Action 'action_greet' set a slot type 'name' that it never set during the training. This can throw of the prediction. Make sure to include training examples in your stories for the different types of slots this action can return. Remember: you need to set the slots manually in the stories by adding '- slot{"name": "sofiat"}' after the action.
+Rasa process starting
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from models/default/bimnlu/intent_classifier_tensorflow_embedding.ckpt
+Scheduler started
+Looking for jobs to run
+No jobs; waiting until a job is added
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/keras/backend.py:4010: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Available web server routes: 
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from models/default/bimnlu/intent_classifier_tensorflow_embedding.ckpt
+Scheduler started
+Looking for jobs to run
+No jobs; waiting until a job is added
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/keras/backend.py:4010: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Available web server routes: 
+static                                             OPTIONS, GET, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, GET, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'tellme the volume of the building' with intent '{'name': 'project_information', 'confidence': 0.7828673124313354}' and entities '[{'start': 11, 'end': 17, 'value': 'volume', 'entity': 'volume', 'confidence': 0.984406828373991, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+	projectname: None
+	psearch_request: None
+	requested_slot: None
+	shown_privacy: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_project_information': 1.0, 'entity_volume': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_project_info' with prob 0.96.
+Calling action endpoint to run action 'action_project_info'.
+Action 'action_project_info' ended with events '["SlotSet(key: psearch_request, value: ['volume'])"]'
+Action 'action_project_info' set a slot type 'psearch_request' that it never set during the training. This can throw of the prediction. Make sure to include training examples in your stories for the different types of slots this action can return. Remember: you need to set the slots manually in the stories by adding '- slot{"psearch_request": ["volume"]}' after the action.
+Bot utterance 'BotUttered(text: Can you tell me the project name, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_project_information': 1.0, 'entity_volume': 1.0}, {'prev_action_project_info': 1.0, 'slot_psearch_request_0': 1.0, 'intent_project_information': 1.0, 'entity_volume': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'UWE fbl building' with intent '{'name': 'enter_data', 'confidence': 0.940667450428009}' and entities '[]'
+Logged UserUtterance - tracker now has 7 events
+Current slot values: 
+	name: None
+	projectname: None
+	psearch_request: ['volume']
+	requested_slot: None
+	shown_privacy: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_project_information': 1.0, 'entity_volume': 1.0}, {'prev_action_project_info': 1.0, 'slot_psearch_request_0': 1.0, 'intent_project_information': 1.0, 'entity_volume': 1.0}, {'intent_enter_data': 1.0, 'prev_action_listen': 1.0, 'slot_psearch_request_0': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_project_info' with prob 0.95.
+Calling action endpoint to run action 'action_project_info'.
+Action 'action_project_info' ended with events '[]'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_project_information': 1.0, 'entity_volume': 1.0}, {'prev_action_project_info': 1.0, 'slot_psearch_request_0': 1.0, 'intent_project_information': 1.0, 'entity_volume': 1.0}, {'intent_enter_data': 1.0, 'prev_action_listen': 1.0, 'slot_psearch_request_0': 1.0}, {'intent_enter_data': 1.0, 'prev_action_project_info': 1.0, 'slot_psearch_request_0': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from models/default/bimnlu/intent_classifier_tensorflow_embedding.ckpt
+Scheduler started
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/keras/backend.py:4010: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Rasa Core server is up and running on http://localhost:5005
+Encountered an exception while running action 'action_project_info'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Rasa process starting
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from models/default/bimnlu/intent_classifier_tensorflow_embedding.ckpt
+Scheduler started
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/keras/backend.py:4010: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Rasa Core server is up and running on http://localhost:5005
+Encountered an exception while running action 'action_project_info'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Rasa process starting
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from models/default/bimnlu/intent_classifier_tensorflow_embedding.ckpt
+Scheduler started
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/keras/backend.py:4010: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Rasa Core server is up and running on http://localhost:5005
+Encountered an exception while running action 'action_project_issues'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Encountered an exception while running action 'action_greet'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Rasa process starting
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from models/default/bimnlu/intent_classifier_tensorflow_embedding.ckpt
+Scheduler started
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/keras/backend.py:4010: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Rasa Core server is up and running on http://localhost:5005
+Encountered an exception while running action 'action_greet'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Rasa process starting
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from models/default/bimnlu/intent_classifier_tensorflow_embedding.ckpt
+Scheduler started
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/keras/backend.py:4010: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Rasa Core server is up and running on http://localhost:5005
+Encountered an exception while running action 'action_project_info'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Rasa process starting
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from models/default/bimnlu/intent_classifier_tensorflow_embedding.ckpt
+Scheduler started
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/keras/backend.py:4010: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from models/default/bimnlu/intent_classifier_tensorflow_embedding.ckpt
+Scheduler started
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/keras/backend.py:4010: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Rasa Core server is up and running on http://localhost:5005
+Action 'action_greet' set a slot type 'name' that it never set during the training. This can throw of the prediction. Make sure to include training examples in your stories for the different types of slots this action can return. Remember: you need to set the slots manually in the stories by adding '- slot{"name": "sofiat"}' after the action.
+Rasa process starting
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from models/default/bimnlu/intent_classifier_tensorflow_embedding.ckpt
+Scheduler started
+Looking for jobs to run
+No jobs; waiting until a job is added
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/keras/backend.py:4010: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Available web server routes: 
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'hi' with intent '{'name': 'enter_data', 'confidence': 0.7861558794975281}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+	projectname: None
+	psearch_request: None
+	requested_slot: None
+	shown_privacy: None
+Current tracker state [None, None, None, {}, {'intent_enter_data': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_project_info' with prob 0.69.
+Calling action endpoint to run action 'action_project_info'.
+Action 'action_project_info' ended with events '[]'
+Current tracker state [None, None, {}, {'intent_enter_data': 1.0, 'prev_action_listen': 1.0}, {'prev_action_project_info': 1.0, 'intent_enter_data': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from models/default/bimnlu/intent_classifier_tensorflow_embedding.ckpt
+Scheduler started
+Looking for jobs to run
+No jobs; waiting until a job is added
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/keras/backend.py:4010: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Available web server routes: 
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'hi' with intent '{'name': 'enter_data', 'confidence': 0.7459321022033691}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+	projectname: None
+	psearch_request: None
+	requested_slot: None
+	shown_privacy: None
+Current tracker state [None, None, None, {}, {'intent_enter_data': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_project_info' with prob 0.69.
+Calling action endpoint to run action 'action_project_info'.
+Action 'action_project_info' ended with events '[]'
+Current tracker state [None, None, {}, {'intent_enter_data': 1.0, 'prev_action_listen': 1.0}, {'intent_enter_data': 1.0, 'prev_action_project_info': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'hi sophie' with intent '{'name': 'greet', 'confidence': 0.8894869089126587}' and entities '[]'
+Logged UserUtterance - tracker now has 5 events
+Current slot values: 
+	name: None
+	projectname: None
+	psearch_request: None
+	requested_slot: None
+	shown_privacy: None
+Current tracker state [None, {}, {'intent_enter_data': 1.0, 'prev_action_listen': 1.0}, {'intent_enter_data': 1.0, 'prev_action_project_info': 1.0}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_greet' with prob 1.00.
+Calling action endpoint to run action 'action_greet'.
+Action 'action_greet' ended with events '[]'
+Bot utterance 'BotUttered(text: Hey there, welcome to the conversational building data service!, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Bot utterance 'BotUttered(text: Tell me your name., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_enter_data': 1.0, 'prev_action_listen': 1.0}, {'intent_enter_data': 1.0, 'prev_action_project_info': 1.0}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_action_greet': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'sofiat' with intent '{'name': 'enter_data', 'confidence': 0.9628722667694092}' and entities '[{'start': 0, 'end': 6, 'value': 'sofiat', 'entity': 'name', 'confidence': 0.8762134593153335, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 11 events
+Current slot values: 
+	name: sofiat
+	projectname: None
+	psearch_request: None
+	requested_slot: None
+	shown_privacy: None
+Current tracker state [{'intent_enter_data': 1.0, 'prev_action_listen': 1.0}, {'intent_enter_data': 1.0, 'prev_action_project_info': 1.0}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_action_greet': 1.0}, {'intent_enter_data': 1.0, 'prev_action_listen': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_greet' with prob 1.00.
+Calling action endpoint to run action 'action_greet'.
+Action 'action_greet' ended with events '['SlotSet(key: shown_privacy, value: True)', 'SlotSet(key: name, value: sofiat)']'
+Action 'action_greet' set a slot type 'name' that it never set during the training. This can throw of the prediction. Make sure to include training examples in your stories for the different types of slots this action can return. Remember: you need to set the slots manually in the stories by adding '- slot{"name": "sofiat"}' after the action.
+Bot utterance 'BotUttered(text: Hi, sofiat!, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Bot utterance 'BotUttered(text: I provide onsite project implementation support, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Bot utterance 'BotUttered(text: Would you like to get a brief about a project?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'intent_enter_data': 1.0, 'prev_action_project_info': 1.0}, {'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_action_greet': 1.0}, {'intent_enter_data': 1.0, 'prev_action_listen': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'intent_enter_data': 1.0, 'prev_action_greet': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'yes' with intent '{'name': 'enter_data', 'confidence': 0.7297839522361755}' and entities '[]'
+Logged UserUtterance - tracker now has 19 events
+Current slot values: 
+	name: sofiat
+	projectname: None
+	psearch_request: None
+	requested_slot: None
+	shown_privacy: True
+Current tracker state [{'intent_greet': 1.0, 'prev_action_listen': 1.0}, {'intent_greet': 1.0, 'prev_action_greet': 1.0}, {'intent_enter_data': 1.0, 'prev_action_listen': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'intent_enter_data': 1.0, 'prev_action_greet': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'intent_enter_data': 1.0, 'prev_action_listen': 1.0, 'slot_name_0': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_project_info' with prob 0.50.
+Calling action endpoint to run action 'action_project_info'.
+Action 'action_project_info' ended with events '[]'
+Current tracker state [{'intent_greet': 1.0, 'prev_action_greet': 1.0}, {'intent_enter_data': 1.0, 'prev_action_listen': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'intent_enter_data': 1.0, 'prev_action_greet': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'intent_enter_data': 1.0, 'prev_action_listen': 1.0, 'slot_name_0': 1.0}, {'intent_enter_data': 1.0, 'prev_action_project_info': 1.0, 'slot_name_0': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from models/default/bimnlu/intent_classifier_tensorflow_embedding.ckpt
+Scheduler started
+Looking for jobs to run
+No jobs; waiting until a job is added
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/keras/backend.py:4010: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Available web server routes: 
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.6550448536872864}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+	projectname: None
+	psearch_request: None
+	requested_slot: None
+	shown_privacy: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+There is a memorised next action '36'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_greet' with prob 1.00.
+Calling action endpoint to run action 'action_greet'.
+Action 'action_greet' ended with events '[]'
+Bot utterance 'BotUttered(text: Hey there, welcome to the conversational building data service!, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Bot utterance 'BotUttered(text: Tell me your name., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_action_greet': 1.0, 'intent_greet': 1.0}]
+There is a memorised next action '0'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'sofiat' with intent '{'name': 'enter_data', 'confidence': 0.9688666462898254}' and entities '[{'start': 0, 'end': 6, 'value': 'sofiat', 'entity': 'name', 'confidence': 0.8336216212945213, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	name: sofiat
+	projectname: None
+	psearch_request: None
+	requested_slot: None
+	shown_privacy: None
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_action_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_enter_data': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}]
+There is a memorised next action '36'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_greet' with prob 1.00.
+Calling action endpoint to run action 'action_greet'.
+Action 'action_greet' ended with events '['SlotSet(key: shown_privacy, value: True)', 'SlotSet(key: name, value: sofiat)']'
+Action 'action_greet' set a slot type 'name' that it never set during the training. This can throw of the prediction. Make sure to include training examples in your stories for the different types of slots this action can return. Remember: you need to set the slots manually in the stories by adding '- slot{"name": "sofiat"}' after the action.
+Bot utterance 'BotUttered(text: Hey, sofiat!, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Bot utterance 'BotUttered(text: I provide onsite project implementation support, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Bot utterance 'BotUttered(text: Would you like to get a brief about a project?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_action_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_enter_data': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'prev_action_greet': 1.0, 'intent_enter_data': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}]
+There is a memorised next action '0'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'yes' with intent '{'name': 'affirmative', 'confidence': 0.9067299962043762}' and entities '[]'
+Logged UserUtterance - tracker now has 16 events
+Current slot values: 
+	name: sofiat
+	projectname: None
+	psearch_request: None
+	requested_slot: None
+	shown_privacy: True
+Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_action_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_enter_data': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'prev_action_greet': 1.0, 'intent_enter_data': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'prev_action_listen': 1.0, 'intent_affirmative': 1.0, 'slot_name_0': 1.0}]
+There is a memorised next action '34'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_ask_projectname' with prob 1.00.
+Action 'utter_ask_projectname' ended with events '[]'
+Bot utterance 'BotUttered(text: which project?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{'prev_action_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_enter_data': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'prev_action_greet': 1.0, 'intent_enter_data': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'prev_action_listen': 1.0, 'intent_affirmative': 1.0, 'slot_name_0': 1.0}, {'prev_utter_ask_projectname': 1.0, 'intent_affirmative': 1.0, 'slot_name_0': 1.0}]
+There is a memorised next action '0'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'UWE fbl building' with intent '{'name': 'enter_data', 'confidence': 0.96522057056427}' and entities '[{'start': 0, 'end': 16, 'value': 'UWE fbl building', 'entity': 'projectname', 'confidence': 0.9819469777847207, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 21 events
+Current slot values: 
+	name: sofiat
+	projectname: UWE fbl building
+	psearch_request: None
+	requested_slot: None
+	shown_privacy: True
+Feature 'entity_projectname' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [{'prev_action_listen': 1.0, 'intent_enter_data': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'prev_action_greet': 1.0, 'intent_enter_data': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'prev_action_listen': 1.0, 'intent_affirmative': 1.0, 'slot_name_0': 1.0}, {'prev_utter_ask_projectname': 1.0, 'intent_affirmative': 1.0, 'slot_name_0': 1.0}, {'prev_action_listen': 1.0, 'entity_projectname': 1.0, 'slot_projectname_0': 1.0, 'intent_enter_data': 1.0, 'slot_name_0': 1.0}]
+There is a memorised next action '40'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_project_info' with prob 1.00.
+Calling action endpoint to run action 'action_project_info'.
+Action 'action_project_info' ended with events '[]'
+Bot utterance 'BotUttered(text: UWE fbl building is a £300,000 project for UWE, Bristol situated at Coldharbour Lane, Stoke Gifford, Bristol. It is a Renovation project with a 5 month duration., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Bot utterance 'BotUttered(text: Is there anything else I can help you with?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Feature 'entity_projectname' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_projectname' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [{'prev_action_greet': 1.0, 'intent_enter_data': 1.0, 'entity_name': 1.0, 'slot_name_0': 1.0}, {'prev_action_listen': 1.0, 'intent_affirmative': 1.0, 'slot_name_0': 1.0}, {'prev_utter_ask_projectname': 1.0, 'intent_affirmative': 1.0, 'slot_name_0': 1.0}, {'prev_action_listen': 1.0, 'entity_projectname': 1.0, 'slot_projectname_0': 1.0, 'intent_enter_data': 1.0, 'slot_name_0': 1.0}, {'entity_projectname': 1.0, 'slot_projectname_0': 1.0, 'intent_enter_data': 1.0, 'prev_action_project_info': 1.0, 'slot_name_0': 1.0}]
+There is a memorised next action '0'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'no' with intent '{'name': 'negative', 'confidence': 0.8412917852401733}' and entities '[]'
+Logged UserUtterance - tracker now has 26 events
+Current slot values: 
+	name: sofiat
+	projectname: UWE fbl building
+	psearch_request: None
+	requested_slot: None
+	shown_privacy: True
+Feature 'entity_projectname' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_projectname' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [{'prev_action_listen': 1.0, 'intent_affirmative': 1.0, 'slot_name_0': 1.0}, {'prev_utter_ask_projectname': 1.0, 'intent_affirmative': 1.0, 'slot_name_0': 1.0}, {'prev_action_listen': 1.0, 'entity_projectname': 1.0, 'slot_projectname_0': 1.0, 'intent_enter_data': 1.0, 'slot_name_0': 1.0}, {'entity_projectname': 1.0, 'slot_projectname_0': 1.0, 'intent_enter_data': 1.0, 'prev_action_project_info': 1.0, 'slot_name_0': 1.0}, {'prev_action_listen': 1.0, 'slot_projectname_0': 1.0, 'intent_negative': 1.0, 'slot_name_0': 1.0}]
+There is a memorised next action '12'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'utter_bye' with prob 1.00.
+Action 'utter_bye' ended with events '[]'
+Bot utterance 'BotUttered(text: Goodbye!, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Feature 'entity_projectname' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Feature 'entity_projectname' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [{'prev_utter_ask_projectname': 1.0, 'intent_affirmative': 1.0, 'slot_name_0': 1.0}, {'prev_action_listen': 1.0, 'entity_projectname': 1.0, 'slot_projectname_0': 1.0, 'intent_enter_data': 1.0, 'slot_name_0': 1.0}, {'entity_projectname': 1.0, 'slot_projectname_0': 1.0, 'intent_enter_data': 1.0, 'prev_action_project_info': 1.0, 'slot_name_0': 1.0}, {'prev_action_listen': 1.0, 'slot_projectname_0': 1.0, 'intent_negative': 1.0, 'slot_name_0': 1.0}, {'slot_projectname_0': 1.0, 'intent_negative': 1.0, 'prev_utter_bye': 1.0, 'slot_name_0': 1.0}]
+There is a memorised next action '0'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Restoring parameters from models/default/bimnlu/intent_classifier_tensorflow_embedding.ckpt
+Scheduler started
+Looking for jobs to run
+No jobs; waiting until a job is added
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/keras/backend.py:4010: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+From /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Available web server routes: 
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'what's your name' with intent '{'name': 'who_isit', 'confidence': 0.9147194027900696}' and entities '[{'start': 12, 'end': 16, 'value': 'name', 'entity': 'Name', 'confidence': 0.8592814532507836, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	name: None
+	projectname: None
+	psearch_request: None
+	requested_slot: None
+	shown_privacy: None
+Feature 'intent_who_isit' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [None, None, None, {}, {'entity_Name': 1.0, 'prev_action_listen': 1.0, 'intent_who_isit': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Bot utterance 'BotUttered(text: I didn't quite get that, could you rephrase your message?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'tell me your name' with intent '{'name': 'bot_chitchat', 'confidence': 0.9661471843719482}' and entities '[{'start': 13, 'end': 17, 'value': 'name', 'entity': 'Name', 'confidence': 0.8592424871446306, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 7 events
+Current slot values: 
+	name: None
+	projectname: None
+	psearch_request: None
+	requested_slot: None
+	shown_privacy: None
+Current tracker state [None, None, None, {}, {'entity_Name': 1.0, 'intent_bot_chitchat': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_chitchat' with prob 0.81.
+Calling action endpoint to run action 'action_chitchat'.
+Action 'action_chitchat' ended with events '[]'
+Bot utterance 'BotUttered(text: Sophie, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, {}, {'entity_Name': 1.0, 'intent_bot_chitchat': 1.0, 'prev_action_listen': 1.0}, {'entity_Name': 1.0, 'intent_bot_chitchat': 1.0, 'prev_action_chitchat': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'tell me your best foood' with intent '{'name': 'bot_chitchat', 'confidence': 0.9742805361747742}' and entities '[{'start': 13, 'end': 23, 'value': 'best foood', 'entity': 'Food', 'confidence': 0.43064737846856527, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 11 events
+Current slot values: 
+	name: None
+	projectname: None
+	psearch_request: None
+	requested_slot: None
+	shown_privacy: None
+Current tracker state [None, {}, {'entity_Name': 1.0, 'intent_bot_chitchat': 1.0, 'prev_action_listen': 1.0}, {'entity_Name': 1.0, 'intent_bot_chitchat': 1.0, 'prev_action_chitchat': 1.0}, {'entity_Food': 1.0, 'intent_bot_chitchat': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_chitchat' with prob 0.97.
+Calling action endpoint to run action 'action_chitchat'.
+Action 'action_chitchat' ended with events '[]'
+Bot utterance 'BotUttered(text: Biryani Rice, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'entity_Name': 1.0, 'intent_bot_chitchat': 1.0, 'prev_action_listen': 1.0}, {'entity_Name': 1.0, 'intent_bot_chitchat': 1.0, 'prev_action_chitchat': 1.0}, {'entity_Food': 1.0, 'intent_bot_chitchat': 1.0, 'prev_action_listen': 1.0}, {'entity_Food': 1.0, 'intent_bot_chitchat': 1.0, 'prev_action_chitchat': 1.0}]
+There is no memorised next action
+There is no active form
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
