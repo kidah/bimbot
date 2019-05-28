@@ -21,6 +21,7 @@ actions:
 - utter_handleinsult
 - utter_telljoke
 - utter_nicetomeetyou
+- utter_namenotrecognised
 - utter_noworries
 - utter_outofscope
 - utter_whatspossible
@@ -178,7 +179,6 @@ templates:
   - text: Hi, {name}!
   - text: Hello, {name}!
   - text: Hey, {name}!
-  - text: Nice to meet you {name}
   utter_greet_noname:
   - text: Hey!
   - text: Hi!
@@ -187,6 +187,8 @@ templates:
   - text: 'That’s not very nice '
   utter_inform_privacypolicy:
   - text: By chatting to me you agree to our privacy policy, which you can read here.
+  utter_namenotrecognised:
+  - text: I couldn't recognise that as a name. Please provide another
   utter_nicetomeetyou:
   - text: Thank you. It is a pleasure to meet you as well!
   - text: It is nice to meet you too!

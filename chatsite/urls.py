@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .views import home_view, webhook, handle_response, chatview , sochook # handle_response
+from .views import home_view, webhook, handle_response, chatview # handle_response
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +25,5 @@ urlpatterns = [
 urlpatterns += [
     path('', home_view, name='home'),
     path('webhook', webhook, name='webhook'),
-    path('chat', sochook, name='chat'),
     path('chatbot/', chatview, name='chatbot')
 ]

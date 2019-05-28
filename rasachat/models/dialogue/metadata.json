@@ -6,31 +6,31 @@
         "name"
       ]
     },
-    "utter_bye": {
-      "slots": []
-    },
-    "utter_anything_else": {
-      "slots": []
-    },
     "utter_great": {
       "slots": []
     },
     "action_project_issues": {
       "slots": []
     },
-    "action_project_info": {
-      "slots": []
-    },
-    "utter_outofscope": {
+    "utter_bye": {
       "slots": []
     },
     "utter_whatspossible": {
       "slots": []
     },
-    "action_greet": {
+    "utter_anything_else": {
       "slots": []
     },
     "action_chitchat": {
+      "slots": []
+    },
+    "utter_ask_projectname": {
+      "slots": []
+    },
+    "action_project_info": {
+      "slots": []
+    },
+    "action_greet": {
       "slots": []
     }
   },
@@ -50,7 +50,7 @@
     "rasa_core.policies.form_policy.FormPolicy",
     "rasa_core.policies.mapping_policy.MappingPolicy"
   ],
-  "trained_at": "20190527-102949",
+  "trained_at": "20190528-100018",
   "rasa_core": "0.14.4",
   "tensorflow": "1.13.1",
   "sklearn": "0.20.3"

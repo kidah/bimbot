@@ -18,6 +18,6 @@ if __name__ == '__main__':
 # python3 -m rasa_nlu.train -c nlu_config.yml --fixed_model_name current        --data ./data/nlu.md --path ./models/nlu
 # python3 -m rasa_core.train -s data/stories.md -d domain.yml -o models/dialogue --endpoints endpoints.yml
 
-#python3 -m rasa_nlu.train -c nlu_config.yml --fixed_model_name bimnlu        --data ./data/training_dataset.json --path ./models 
+#python3 -m rasa_nlu.train -c nlu_config.yml --fixed_model_name bimnlu        --data ./data/training_dataset.json --path ./models
 # python3 -m rasa_core_sdk.endpoint --actions actions
 #python3 -m rasa_core.run -d models/dialogue -u models/default/bimnlu --endpoints endpoints.yml

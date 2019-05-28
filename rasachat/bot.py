@@ -2,6 +2,7 @@ from rasa_core.agent import Agent
 from rasa_core.channels.socketio import SocketIOInput
 from rasa_core.agent import Agent
 from rasa_core.utils import EndpointConfig
+from rasa_core.policies.fallback import FallbackPolicy
 
 # load action server endpoint
 action_endpoint = EndpointConfig(url="http://127.0.0.1:5055/webhook")

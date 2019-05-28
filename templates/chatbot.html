@@ -110,13 +110,13 @@
         $('#chatform').submit(function(e){
           e.preventDefault(); // prevents page reloading
           socket.emit('user_uttered', {'message': $('#user_says').val() });
-          $('<li class="in"><div class="chat-img"><img alt="Avtar" src="http://bootdey.com/img/Content/avatar/avatar2.png"></div><div class="chat-body"><div class="chat-message"><h5>Tim</h5><p></p></div></div></li>').appendTo('#messages').contents().find("p").text($('#user_says').val());
+          $('<li class="in"><div class="chat-img"><img alt="Avtar" src="http://bootdey.com/img/Content/avatar/avatar2.png"></div><div class="chat-body"><div class="chat-message"><h5>User</h5><p></p></div></div></li>').appendTo('#messages').contents().find("p").text($('#user_says').val());
           return false;
         });
         
         socket.on('bot_uttered', (botUttered) => {
           $.each(botUttered, function(msg, text) {
-            $('<li class="out"><div class="chat-img"><img alt="Avtar" src="../static/img/bimgirl.jpeg"></div><div class="chat-body"><div class="chat-message"><h5>Sophy</h5><p></p></div></div></li>').appendTo('#messages').contents().find('p').text(botUttered['text']);
+            $('<li class="out"><div class="chat-img"><img alt="Avtar" src="../static/img/bimgirl.jpeg"></div><div class="chat-body"><div class="chat-message"><h5>Sophie</h5><p></p></div></div></li>').appendTo('#messages').contents().find('p').text(botUttered['text']);
            console.log(botUttered['text'])
            responsiveVoice.speak(botUttered['text']);
           });
@@ -156,12 +156,12 @@
                 socket.on('connect', function(){
                   console.log("connected")
                   socket.emit('user_uttered', {'message': user_said });
-                  $('<li class="in"><div class="chat-img"><img alt="Avtar" src="http://bootdey.com/img/Content/avatar/avatar2.png"></div><div class="chat-body"><div class="chat-message"><h5>Tim</h5><p></p></div></div></li>').appendTo('#messages').contents().find("p").text($('#user_says').val());
+                  $('<li class="in"><div class="chat-img"><img alt="Avtar" src="http://bootdey.com/img/Content/avatar/avatar2.png"></div><div class="chat-body"><div class="chat-message"><h5>User</h5><p></p></div></div></li>').appendTo('#messages').contents().find("p").text($('#user_says').val());
                   });
                 
                 socket.on('bot_uttered', (botUttered) => {
                 $.each(botUttered, function(msg, text) {
-                $('<li class="out"><div class="chat-img"><img alt="Avtar" src="../static/img/bimgirl.jpeg"></div><div class="chat-body"><div class="chat-message"><h5>Sophy</h5><p></p></div></div></li>').appendTo('#messages').contents().find('p').text(botUttered['text']);
+                $('<li class="out"><div class="chat-img"><img alt="Avtar" src="../static/img/bimgirl.jpeg"></div><div class="chat-body"><div class="chat-message"><h5>Sophie</h5><p></p></div></div></li>').appendTo('#messages').contents().find('p').text(botUttered['text']);
                  console.log(botUttered['text'])
                  responsiveVoice.speak(botUttered['text']);
                 });

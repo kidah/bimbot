@@ -75,6 +75,7 @@
     "prev_utter_handleinsult",
     "prev_utter_telljoke",
     "prev_utter_nicetomeetyou",
+    "prev_utter_namenotrecognised",
     "prev_utter_noworries",
     "prev_utter_outofscope",
     "prev_utter_whatspossible",

@@ -69,7 +69,6 @@ templates:
     - text: "Hi, {name}!"
     - text: "Hello, {name}!"
     - text: "Hey, {name}!"
-    - text: "Nice to meet you {name}"
   utter_greet_noname:
     - text: "Hey!"
     - text: "Hi!"
@@ -111,6 +110,8 @@ templates:
   utter_askwhat:
     - text: "What can I do for you?"
     - text: "How can I help you today?"
+  utter_namenotrecognised:
+    - text: "I couldn't recognise that as a name. Please provide another"
   utter_askwhatelse:
     - text: "What else can I do for you?"
     - text: "Anything else?"
@@ -182,6 +183,7 @@ actions:
   - utter_handleinsult
   - utter_telljoke
   - utter_nicetomeetyou
+  - utter_namenotrecognised
   - utter_noworries
   - utter_outofscope
   - utter_whatspossible

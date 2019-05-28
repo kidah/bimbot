@@ -10,7 +10,7 @@ from rasa_core.channels.socketio import socketio
 
 #@socketio.on('connect')
 def home_view(request):
-	return render(request, 'index.html')
+	return render(request, 'chatbot.html')
 
 def chatview(request):
 	form = ChatForm()
@@ -38,10 +38,3 @@ def handle_response(request, *args, **kwargs):
 		except Exception as e:
 			return JsonResponse({'status': 'FAILED', 'responses': 'default'})
 
-
-
-def on_connect():
-    print('Connected to the Rasa Socket Server')
-
-def sochook(message):
-    print("hlklo")

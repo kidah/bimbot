@@ -61,7 +61,7 @@ class ActionGreetUser(Action):
         shown_privacy = tracker.get_slot("shown_privacy")
         name_entity = next(tracker.get_latest_entity_values("name"), None)
         username = tracker.get_slot("name")
-
+        logger.info(name_entity)
         if intent == "greet":
             if shown_privacy and username:
                 dispatcher.utter_template("utter_greet_name", tracker, name=username)
@@ -83,9 +83,9 @@ class ActionGreetUser(Action):
             dispatcher.utter_template("utter_ask_goal", tracker)
             return [SlotSet("shown_privacy", True), SlotSet("name", name_entity)]
 
-        elif intent == "enter_data":
-            dispatcher.utter_template("utter_greet_name", tracker, name=name_entity)
-            return [SlotSet("name", name_entity)]
+        elif intent == "enter_data" and name_entity is None:
+            dispatcher.utter_template("utter_namenotrecognised", tracker, name=name_entity)
+            return []
         return []
 
 class ActionProject(Action):
@@ -154,6 +154,7 @@ class ActionProject(Action):
                     result = res[0]
                     message = result["Name"] + " is a " + result["ProjectValue"] + " project for " + result["ClientName"] + " situated at " + result["Address"] + ". It is a " + result["ConstructionType"] + " project with a " + result["Duration"] + " duration."
                     dispatcher.utter_message(message)
+                    dispatcher.utter_template("utter_anything_else", tracker)
         return []
         
 class ActionProjectIssues(Action):
