@@ -92,7 +92,7 @@ Now run the django server and the socketio server seperately using two terminals
 
 
 ```
-../bimbot> python manage.py runserver
+../bimbot> python3 manage.py runserver
 # then in another command prompt or terminal run
 ../bimbot/rasachat> python3 bot.py
 # the in another command prompt or terminal . run action server
