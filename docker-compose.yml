@@ -9,7 +9,7 @@ services:
       dockerfile: Dockerfile
     #command: 
     #  - python3 manage.py runserver
-    #entrypoint: ./docker-entrypoint.sh
+    entrypoint: ./docker-entrypoint.sh
     volumes:
       - .:/code
     ports:
