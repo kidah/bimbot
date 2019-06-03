@@ -1,17 +1,9 @@
-### Chatbot Models are up to date with the current versions of rasa core & nlu
 
-# Usage
-**Replace the rasachat/models folder with your models folder and run django server and bot.py file seperately**
-
-**The data used to train the chatbot is very minimal, you should replace the rasachat/models folder or extend and improve the training data by updating `rasachat/nlu.nd` & `rasachat/stories.md` files.**
-
-Also refer to [Django-Rasa-Sockets](https://github.com/Alexmhack/Django-Rasa-Sockets) for more info on implementing Django and Rasa with Sockets.
-
-# Django-Rasa-Bot
-Integrating Rasa Core with Django backend and finally using Webchat for chatbot user interface
+# BIMBOT
+Integrating Rasa Core with Django backend and a chatbot user interface
 
 In this project we will be using [rasa_core](https://rasa.com/docs/core/quickstart/) 
-for our chatbot backend **django** for website backend and [rasa-webchat](https://github.com/mrbot-ai/rasa-webchat) for chatbot **User Interface**
+for our chatbot backend **django** for website backend and some custom user interface for chatbot **User Interface**
 
 We have to first create a Rasa SocketIO Channel Layer
 
@@ -100,10 +92,13 @@ Now run the django server and the socketio server seperately using two terminals
 
 
 ```
-../Django-Rasa-Bot> python manage.py runserver
+../bimbot> python3 manage.py runserver
 # then in another command prompt or terminal run
-../Django-Rasa-Bot/rasachat> python bot.py
+../bimbot/rasachat> python3 bot.py
+# the in another command prompt or terminal . run action server
+../bimbot/rasachat> python3 -m rasa_core_sdk.endpoint --actions actions
 ```
 
-Now open the url [127.0.0.1:8000](http://127.0.0.1:8000) and click on the chat widget placed in bottom right and 
-enter ```hi there``` and the bot will reply.
+
+Now open the url [127.0.0.1:8000](http://127.0.0.1:8000) and click on the speaker icon to say ```hi sophie ``` or
+enter ```hi there``` in the input form and the bot will reply. For the voice interaction, kindly use Google Chrome as that is the only supported browser for now.  
