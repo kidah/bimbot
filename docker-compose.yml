@@ -7,8 +7,8 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
-    command: 
-      - python3 /code/manage.py runserver
+    #command: 
+    #  - python3 manage.py runserver
     #entrypoint: ./docker-entrypoint.sh
     volumes:
       - .:/code

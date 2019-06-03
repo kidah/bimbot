@@ -26,5 +26,5 @@ urlpatterns += [
     path('', home_view, name='home'),
     path('webhook', webhook, name='webhook'),
     path('chat', sochook, name='chat'),
-    path('chatbot/', chatview, name='chatbot')
+    path('chatbot', chatview, name='chatbot')
 ]
