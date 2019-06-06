@@ -50,7 +50,6 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     # middleware for corsheaders
     'corsheaders.middleware.CorsMiddleware',
-
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -139,6 +138,13 @@ STATICFILES_DIRS = [
 # allow cors headers
 CORS_ORIGIN_ALLOW_ALL = True
 
+CORS_ALLOW_CREDENTIALS = True
+#CORS_ORIGIN_WHITELIST = (
+#    '0.0.0.0:8000',
+#)
+#CORS_ORIGIN_REGEX_WHITELIST = (
+#    '0.0.0.0:8000',
+#)
 
 # path for rasa_core models and dialogue
 RASA_CORE_MODELS = os.path.join(BASE_DIR, 'rasachat', 'models', 'dialogue')
@@ -153,6 +159,7 @@ ALLOWED_HOSTS = [
     'chatbot349.herokuapp.com',
     '127.0.0.1',
     'localhost',
+    '0.0.0.0',
 ]
 # RASA SOCKET CHANNEL
 
