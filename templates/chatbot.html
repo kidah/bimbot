@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../static/img/favicon.ico">
+    <link rel="icon" href="{% static  'img/favicon.ico' %}">
 
     <title>BIM Chat</title>
 
@@ -13,7 +14,7 @@
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="../static/css/chat.css" rel="stylesheet">
+    <link href="{% static 'css/chat.css' %}" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
     </style>
   </head>
@@ -21,7 +22,7 @@
   <body>
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">
-        <img src="../static/img/chat.png" width="35px" height="35px" class="img img-fluid" />
+        <img src="{% static 'img/chat.png' %}" width="35px" height="35px" class="img img-fluid" />
         <span class='page-title'>CAPCAT</span></a>
       <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
       <ul class="navbar-nav px-3">
@@ -38,7 +39,7 @@
             <div class="sidebar-content">
               <a class="navbar-brand js-scroll-trigger" href="#page-top">
                   <span class="d-none d-lg-block">
-                    <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../static/img/newsbot-bot.png" alt="" width="80%" height="80%">
+                    <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'img/newsbot-bot.png' %}" alt="" width="80%" height="80%">
                   </span>
                 </a>
                 <div class="" id="navbarSupportedContent">
@@ -72,7 +73,7 @@
                     <div class="form-group">
                         <div class="speech">
                           <input class="form-control" id="user_says" placeholder="Start Speaking..."></input>
-                          <img src="../static/img/iconfinder_mic_1055024.png" id="img-listen" class="img img-responsive"/>
+                          <img src="{% static 'img/iconfinder_mic_1055024.png' %}" id="img-listen" class="img img-responsive"/>
                         </div>
                       </div>
                 </form>
@@ -101,7 +102,7 @@
 <script>
         $(function () {
     
-        var socket = io('http://localhost:5005/', {'path': '/socket.io/', 'pingInterval': 1000, 'pingTimeout': 5000,});
+        var socket = io('http://0.0.0.0:5055/', {'path': '/socket.io/', 'pingInterval': 1000, 'pingTimeout': 5000,});
     
         socket.on('connect', function(){
             console.log("connected")
@@ -151,7 +152,7 @@
                 console.log(user_said);
                 recognition.stop();
                 $('#img-listen').removeClass("pulse-ring");
-                var socket = io('http://localhost:5005/', {'path': '/socket.io/', 'pingInterval': 1000, 'pingTimeout': 5000,});
+                var socket = io('http://0.0.0.0:5055/', {'path': '/socket.io/', 'pingInterval': 1000, 'pingTimeout': 5000,});
                 socket.on('connect', function(){
                   console.log("connected")
                   socket.emit('user_uttered', {'message': user_said });

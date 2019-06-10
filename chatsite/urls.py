@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
 from .views import home_view, webhook, handle_response, chatview , sochook # handle_response
 
@@ -27,4 +29,5 @@ urlpatterns += [
     path('webhook', webhook, name='webhook'),
     path('chat', sochook, name='chat'),
     path('chatbot', chatview, name='chatbot')
-]
+
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

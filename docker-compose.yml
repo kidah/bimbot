@@ -15,9 +15,9 @@ services:
     ports:
       - 8000:8000
     tty: true
-    # depends_on:
-    #   - rasa
-    #   - action_server
+    depends_on:
+      - rasa
+      - action_server
 
   rasa:
     image: rasa/rasa:latest-full
@@ -26,7 +26,7 @@ services:
     volumes:
       - ./:/app
     command:
-      - run
+      - run 
 
   action_server:
     image: rasa/rasa_sdk:latest

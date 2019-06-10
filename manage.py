@@ -21,3 +21,40 @@ if __name__ == '__main__':
 #python3 -m rasa_nlu.train -c nlu_config.yml --fixed_model_name bimnlu        --data ./data/training_dataset.json --path ./models 
 # python3 -m rasa_core_sdk.endpoint --actions actions
 #python3 -m rasa_core.run -d models/dialogue -u models/current/bimnlu --endpoints endpoints.yml
+''' 
+docker run \
+  -v $(pwd)/models:/app/models \
+  rasa/rasa:latest-full \
+  --endpoints.yml
+  run
+
+docker run 
+-v $(pwd):/app/project
+-v $(pwd)/models/rasa_core:/app/models 
+rasa/rasa_core:latest
+run python -m rasa_core.train
+interactive
+-o models 
+-d domain.yml
+-s /app/project/data/stories.md 
+--nlu /app/models 
+--endpoints /app/project/config/endpoints.yml
+
+docker run \
+  -v $(pwd):/app \
+  -v $(pwd)/models/rasa_core:/app/models \
+  rasa/rasa:latest-full \
+  train \
+    --domain domain.yml \
+    --data data \
+    --out models \
+    --endpoints /app/project/config/endpoints.yml
+
+docker run \
+  -v $(pwd):/app \
+  rasa/rasa:latest-full \
+  train \
+    --domain domain.yml \
+    --data data \
+    --out models 
+'''

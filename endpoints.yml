@@ -17,6 +17,8 @@ action_endpoint:
 # By default the conversations are stored in memory.
 # https://rasa.com/docs/rasa/api/tracker-stores/
 
+core_endpoint:
+  url: "http://0.0.0.0:5005"
 #tracker_store:
 #    type: redis
 #    url: <host of the redis instance, e.g. localhost>

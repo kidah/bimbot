@@ -29,7 +29,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = "xtvzueg%(1l(n$u8ugvtrfh2wi#bhsnq_n79ccqoeg25@3w!ev"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # Application definition
 
@@ -136,9 +136,9 @@ STATICFILES_DIRS = [
 
 
 # allow cors headers
-CORS_ORIGIN_ALLOW_ALL = True
+#CORS_ORIGIN_ALLOW_ALL = True
 
-CORS_ALLOW_CREDENTIALS = True
+#CORS_ALLOW_CREDENTIALS = True
 #CORS_ORIGIN_WHITELIST = (
 #    '0.0.0.0:8000',
 #)
