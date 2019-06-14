@@ -13,8 +13,7 @@ def home_view(request):
 	return render(request, 'chatbot.html')
 
 def chatview(request):
-	form = ChatForm()
-	return render(request, 'chatbot.html', {'form': form} )
+	return render(request, 'index.html' )
 
 @csrf_exempt
 def webhook(request):
