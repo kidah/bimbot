@@ -11,14 +11,14 @@
 # https://rasa.com/docs/rasa/core/actions/#custom-actions/
 
 action_endpoint:
-  url: "http://0.0.0.0:5055/webhook"
+  url: "//0.0.0.0:5055/webhook"
 
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
 # https://rasa.com/docs/rasa/api/tracker-stores/
 
 core_endpoint:
-  url: "http://0.0.0.0:5005"
+  url: "//0.0.0.0:5005"
 #tracker_store:
 #    type: redis
 #    url: <host of the redis instance, e.g. localhost>
