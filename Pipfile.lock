@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b581ed82dddc1459a5fa5400816f3226a71fb2f80657b379c56a42e42b9a3052"
+            "sha256": "809b1c56a4ba32729e0bac35dc26cf2d965552fca0091cc3d3f6b5e74edfd834"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -376,9 +376,6 @@
             ],
             "index": "pypi",
             "version": "==0.14"
-        },
-        "en-core-web-sm==2-1-0": {
-            "file": "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.1.0/en_core_web_sm-2.1.0.tar.gz#egg=en_core_web_sm==2.1.0"
         },
         "fakeredis": {
             "hashes": [
