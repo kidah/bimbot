@@ -19,8 +19,8 @@ RUN pipenv install --system --deploy --verbose
 
 
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
-#RUN chmod +x ./docker-entrypoint.sh
-ENTRYPOINT [". /docker-entrypoint.sh"]
+#RUN chmod +x . /docker-entrypoint.sh
+ENTRYPOINT ["./docker-entrypoint.sh"]
 
 
 EXPOSE 8000
