@@ -65,3 +65,12 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.6/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
     if resp.headers is None:
 AttributeError: 'list' object has no attribute 'headers'
+2019-06-15 16:03:22,711 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
