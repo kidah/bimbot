@@ -3,6 +3,7 @@ import logging, sys
 from datetime import datetime
 from typing import Text, Dict, Any, List
 import json
+import requests
 import sqlite3
 import re
 
