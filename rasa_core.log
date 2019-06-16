@@ -16621,3 +16621,384 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
     raise NotFound("Requested URL {} not found".format(url))
 sanic.exceptions.NotFound: Requested URL / not found
+2019-06-16 17:26:11,146 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:26:11,148 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:26:16,841 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:26:16,844 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:26:23,849 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:26:23,851 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:26:29,853 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:26:29,856 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:26:35,902 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:26:35,906 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:26:42,839 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:26:42,842 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:26:49,172 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:26:49,175 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:26:56,189 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:26:56,192 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:27:02,862 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:27:02,864 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:27:10,164 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:27:10,167 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:27:17,284 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:27:17,287 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:27:23,847 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:27:23,850 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:27:30,853 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:27:30,856 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:27:37,836 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:27:37,839 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:27:43,843 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:27:43,846 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:27:50,182 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:27:50,185 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:27:57,239 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:27:57,242 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:28:03,158 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:28:03,161 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:28:10,146 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:28:10,150 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:28:17,169 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:28:17,171 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:28:24,288 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:28:24,291 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:28:30,177 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:28:30,180 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:28:37,006 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:28:37,009 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:28:44,285 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:28:44,288 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:28:51,275 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:28:51,278 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:28:58,159 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:28:58,163 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:29:04,164 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:29:04,166 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:29:11,185 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:29:11,187 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:29:17,285 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:29:17,288 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:29:23,106 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:29:23,109 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:29:28,126 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:29:28,129 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:29:34,374 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
