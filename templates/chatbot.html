@@ -102,7 +102,7 @@
 <script>
         $(function () {
     
-        var socket = io('//0.0.0.0:5005/', {'path': '/socket.io/', 'pingInterval': 1000, 'pingTimeout': 5000,});
+        var socket = io('https://chatbot349.herokuapp.com:5005/', {'path': '/socket.io/', 'pingInterval': 1000, 'pingTimeout': 5000,});
     
         socket.on('connect', function(){
             console.log("connected")
@@ -152,7 +152,7 @@
                 console.log(user_said);
                 recognition.stop();
                 $('#img-listen').removeClass("pulse-ring");
-                var socket = io('//0.0.0.0:5005/', {'path': '/socket.io/', 'pingInterval': 1000, 'pingTimeout': 5000,});
+                var socket = io('https://chatbot349.herokuapp.com:5005/', {'path': '/socket.io/', 'pingInterval': 1000, 'pingTimeout': 5000,});
                 socket.on('connect', function(){
                   console.log("connected")
                   socket.emit('user_uttered', {'message': user_said });
