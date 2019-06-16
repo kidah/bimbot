@@ -14,7 +14,7 @@ services:
     tty: true
     depends_on:
       - rasa
-      - action_server
+#     - action_server
 
   rasa:
     image: rasa/rasa:latest-full
@@ -24,8 +24,16 @@ services:
       - ./:/app
     command:
       - run 
+      - --endpoints
+      - endpoints.yml
 
   action_server:
-    image: rasa/rasa_sdk:latest
+    image: rasa/rasa-sdk:latest
     volumes:
       - ./actions:/app/actions
+    ports:
+      - 5055:5055
+    command:
+      - start
+      - --actions
+      - actions

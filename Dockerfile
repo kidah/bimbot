@@ -26,3 +26,5 @@ ENTRYPOINT ["./docker-entrypoint.sh"]
 EXPOSE 8000
 
 COPY . /code/
+#CMD ["python3" ,"-m", "rasa_core_sdk.endpoint", "--actions", "actions"]
+#CMD ["start", "--actions", "actions.actions"]python3 -m rasa_core_sdk.endpoint --actions actions
