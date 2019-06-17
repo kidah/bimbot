@@ -17024,3 +17024,754 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.6/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
     if resp.headers is None:
 AttributeError: 'list' object has no attribute 'headers'
+2019-06-16 17:38:16,253 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:16,257 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:17,978 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:17,980 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:19,183 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:19,186 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:23,936 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:23,939 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:24,341 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:24,344 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:25,384 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:25,386 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:28,006 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:28,010 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:34,028 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:34,031 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:40,450 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:40,454 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:45,936 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:45,940 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:50,998 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:51,001 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:57,854 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:38:57,857 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:05,110 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:05,113 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:11,852 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:11,855 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:17,904 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:17,907 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:24,087 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:24,090 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:25,902 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:25,904 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:26,693 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:26,696 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:29,467 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:29,470 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:33,847 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:33,849 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:40,219 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:40,222 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:47,005 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:47,008 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:54,122 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:39:54,125 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:01,023 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:01,027 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:08,100 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:08,103 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:15,105 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:15,107 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:21,129 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:21,132 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:27,126 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:27,130 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:33,127 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:33,130 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:39,104 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:39,106 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:45,115 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:45,118 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:51,121 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:51,124 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:57,122 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:40:57,124 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:41:03,103 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:41:03,106 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:41:09,110 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:41:09,113 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:41:15,119 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:41:15,123 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:41:20,136 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:41:20,139 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:41:25,152 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:41:25,156 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:41:31,118 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:41:31,121 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:41:37,085 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:41:37,087 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/server.py", line 267, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2019-06-16 17:43:14,655 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/usr/local/lib/python3.6/site-packages/spf/framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-06-16 18:45:09,241 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "uvloop/loop.pyx", line 1112, in uvloop.loop.Loop._create_server
+  File "uvloop/handles/streamserver.pyx", line 58, in uvloop.loop.UVStreamServer.listen
+  File "uvloop/handles/streamserver.pyx", line 95, in uvloop.loop.UVStreamServer._fatal_error
+OSError: [Errno 48] Address already in use
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sanic/server.py", line 745, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "uvloop/loop.pyx", line 1451, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1684, in create_server
+  File "uvloop/loop.pyx", line 1116, in uvloop.loop.Loop._create_server
+OSError: [Errno 48] error while attempting to bind on address ('0.0.0.0', 5005): address already in use
+2019-06-16 17:46:04,987 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/usr/local/lib/python3.6/site-packages/spf/framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-06-16 19:11:21,964 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/usr/local/lib/python3.6/site-packages/spf/framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-06-16 19:16:10,934 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/usr/local/lib/python3.6/site-packages/spf/framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-06-16 19:20:08,925 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/usr/local/lib/python3.6/site-packages/spf/framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-06-16 20:25:06,075 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2019-06-16 22:02:57,522 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/usr/local/lib/python3.6/site-packages/spf/framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-06-17 05:31:39,408 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/usr/local/lib/python3.6/site-packages/spf/framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-06-17 05:32:38,300 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/usr/local/lib/python3.6/site-packages/spf/framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-06-17 05:34:34,379 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/usr/local/lib/python3.6/site-packages/spf/framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-06-17 09:55:49,866 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2019-06-17 09:57:16,726 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2019-06-17 09:57:17,304 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/favicon.ico'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /favicon.ico not found
+2019-06-17 09:57:19,912 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2019-06-17 09:59:23,599 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2019-06-17 09:59:33,332 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2019-06-17 09:59:35,838 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2019-06-17 10:12:34,580 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/usr/local/lib/python3.6/site-packages/spf/framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-06-17 10:17:28,360 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2019-06-17 10:17:38,522 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 893, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "/usr/local/lib/python3.6/site-packages/sanic/router.py", line 469, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL / not found
+2019-06-17 10:25:41,563 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/usr/local/lib/python3.6/site-packages/spf/framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-06-17 10:41:42,828 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/usr/local/lib/python3.6/site-packages/spf/framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-06-17 10:50:36,959 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/usr/local/lib/python3.6/site-packages/spf/framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-06-17 11:05:19,695 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/usr/local/lib/python3.6/site-packages/spf/framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-06-17 11:05:22,256 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/usr/local/lib/python3.6/site-packages/spf/framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/usr/local/lib/python3.6/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'

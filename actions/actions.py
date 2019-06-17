@@ -8,10 +8,10 @@ import sqlite3
 import re
 
 
-from rasa_core_sdk import Action, Tracker, ActionExecutionRejection
-from rasa_core_sdk.executor import CollectingDispatcher
-from rasa_core_sdk.forms import FormAction, REQUESTED_SLOT
-from rasa_core_sdk.events import (
+from rasa_sdk import Action, Tracker, ActionExecutionRejection
+from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.forms import FormAction, REQUESTED_SLOT
+from rasa_sdk.events import (
     SlotSet,
 	UserUttered,
     UserUtteranceReverted,
@@ -21,7 +21,7 @@ from rasa_core_sdk.events import (
 )
 
 logger = logging.getLogger(__name__)
-
+print("$$"*50)
 def db_conn(query, t=None):
     try:
         # Open connection to DB
@@ -106,7 +106,7 @@ class ActionGreetUser(Action):
         intent = tracker.latest_message["intent"].get("name")
         shown_privacy = tracker.get_slot("shown_privacy")
         name_entity = next(tracker.get_latest_entity_values("name"), None)
-  
+       
         if intent == "greet":
             if shown_privacy and name_entity and name_entity.lower() != "sara":
                 dispatcher.utter_template("utter_greet_name", tracker, name=name_entity)

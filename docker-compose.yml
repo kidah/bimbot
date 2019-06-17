@@ -7,33 +7,38 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
+    networks: ['rasanetwork']
     volumes:
       - .:/code
     ports:
       - 8000:8000
     tty: true
-    depends_on:
-      - rasa
-#     - action_server
+#    depends_on:
+#      - rasa
+#      - action_server
 
   rasa:
     image: rasa/rasa:latest-full
+    networks: ['rasanetwork']
     ports:
       - 5005:5005
     volumes:
       - ./:/app
     command:
-      - run 
+      - start
       - --endpoints
       - endpoints.yml
 
   action_server:
     image: rasa/rasa-sdk:latest
+    networks: ['rasanetwork']
+    ports:
+      - "5055:5055"
     volumes:
       - ./actions:/app/actions
-    ports:
-      - 5055:5055
     command:
       - start
       - --actions
       - actions
+
+networks: {rasanetwork: {}}

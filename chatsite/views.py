@@ -10,7 +10,7 @@ from rasa_core.channels.socketio import socketio
 
 #@socketio.on('connect')
 def home_view(request):
-	return render(request, 'index.html')
+	return render(request, 'chatbot.html')
 
 def chatview(request):
 	form = ChatForm()

@@ -20,13 +20,18 @@ if __name__ == '__main__':
 
 #python3 -m rasa_nlu.train -c nlu_config.yml --fixed_model_name bimnlu        --data ./data/training_dataset.json --path ./models 
 # python3 -m rasa_core_sdk.endpoint --actions actions
-#python3 -m rasa_core.run -d models/dialogue -u models/current/bimnlu --endpoints endpoints.yml
+#python3 -m rasa_core.run -d models/dialogsue -u models/current/bimnlu --endpoints endpoints.yml
 ''' 
 docker run \
   -v $(pwd)/models:/app/models \
   rasa/rasa:latest-full \
-  --endpoints.yml
+  --endpoints endpoints.yml
   run
+
+  docker run -p 5055:5055 --mount type=bind,source=$(pwd)/actions,target=/app/actions \
+	rasa/rasa-sdk:latest 
+  
+  lsof -i 5055 kill pid
 
 docker run 
 -v $(pwd):/app/project
