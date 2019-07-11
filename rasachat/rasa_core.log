@@ -19311,3 +19311,36 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
     if resp.headers is None:
 AttributeError: 'list' object has no attribute 'headers'
+2019-07-11 12:05:08,698 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/spf/framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sanic_cors/extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-11 12:06:16,553 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/spf/framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sanic_cors/extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'
+2019-07-11 12:07:39,739 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sanic/app.py", line 958, in handle_request
+    request, response
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/spf/framework.py", line 543, in _run_response_middleware
+    _response = await _response
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sanic_cors/extension.py", line 266, in unapplied_cors_response_middleware
+    set_cors_headers(req, resp, context, res_options)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sanic_cors/core.py", line 248, in set_cors_headers
+    if resp.headers is None:
+AttributeError: 'list' object has no attribute 'headers'

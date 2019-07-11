@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 def db_conn(query, t=None):
     try:
         # Open connection to DB
-        conn = sqlite3.connect('./data2/sqlite2.db')
+        conn = sqlite3.connect('buildingdata.db')
         # Create a cursor
         c = conn.cursor()
         # Execute the query
